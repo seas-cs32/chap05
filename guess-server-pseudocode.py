@@ -6,7 +6,7 @@ HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
 PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
 
 secret = random.randint(1, 100)
-# print(f'The secret number is {the_secret}')
+# print(f'The secret number is {secret}')
 
 with create_new_socket() as s:
     # Bind socket to address and publish contact info
