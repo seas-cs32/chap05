@@ -5,7 +5,7 @@ def main():
     print('## Welcome to GUESS THE NUMBER! ##')
 
     secret = random.randint(1, 100)
-    # print(f'The secret number is {the_secret}')
+    # print(f'The secret number is {secret}')
 
     while True:
         # Grab a guess from the player
