@@ -50,7 +50,7 @@ Let's get started!
 
 **Step 1: Non-networked, computer opponent, 1 round.** Write a script called
 `roshambo.py`. The structure of this first script should look a lot like
-`guess.py` from class. How is it different?
+`guess32.py` from class. How is it different?
 
 - The computer randomly chooses from a list of hand shapes, not from a range
   of integers. Which routine in Python's `random` library would should you use?
@@ -75,6 +75,8 @@ You: rock   Computer: scissors
 You win!
 $ python3 roshambo.py
 ## Welcome to ROSHAMBO! ##
+Please pick your shape: thumbs up
+Shape must be rock, paper, or scissors. Try again...
 Please pick your shape: rock
 You: rock   Computer: paper
 You lose!
@@ -130,7 +132,7 @@ networked client `roshambo_sclient.py` and the server `roshambo_dserver.py`.
 Your “dumb” server obviously has to do the same networking work as you did with
 your server in Step 2, but otherwise, it should only receive a request from the
 client to generate a random choice and then send that choice back to the client.
-Again, you put `recv` in an infinite loop with the same break condition.
+Again, you'll put `recv` in an infinite loop with the same break condition.
 
 When you run this client and server pair, a player should not be able to tell if
 they were running a pair from this step or the previous one. When you’ve
@@ -161,7 +163,7 @@ match.
 Your script’s output should look like the following example:
 
 ```
-$ python3 roshambo.py
+$ python3 roshambo3.py
 ## Welcome to ROSHAMBO! ##
 Please pick your shape: rock
 You: rock   Computer: rock
@@ -245,7 +247,7 @@ rlib = importlib.import_module('roshambo3-2p-client')
 
 <blockquote>
 
-**DESIGN NOTE (important for the pset):** We’re taking shortcut in our 2-player,
+**DESIGN NOTE (important for the pset):** We’re taking a shortcut in our 2-player,
 networked application that you should understand. Normally, all players in such
 a game would play from their own clients. However, this means that the server
 would have to accept multiple connections from multiple clients, and this
