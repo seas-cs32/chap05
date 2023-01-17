@@ -7,7 +7,7 @@ PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
 
 def main():
     secret = random.randint(1, 100)
-    # print(f'The secret number is {the_secret}')
+    # print(f'The secret number is {secret}')
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.bind((HOST, PORT))
