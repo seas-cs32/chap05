@@ -5,9 +5,10 @@ def main():
     print('## Welcome to GUESS THE NUMBER! ##')
 
     secret = random.randint(1, 100)
-    # print(f'The secret number is {secret}')
+    # print(f'DEBUG: The secret number is {secret}')
 
-    while True:
+    while True:   # our game loop
+        
         # Grab a guess from the player
         while True:
             try:
@@ -15,8 +16,9 @@ def main():
                 break
             except ValueError:
                 print('Guesses must be an integer. Try again...')
-        # print(f'You guessed {guess}')
+        # print(f'DEBUG: You guessed {guess}')
 
+        # Check guess against the secret
         if guess < secret:
             print('Too small!')
         elif guess == secret:

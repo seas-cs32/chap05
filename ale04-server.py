@@ -14,22 +14,22 @@ def main():
         s.listen()
         print("GUESS-THE-NUMBER server started. Listening on", (HOST, PORT))
 
-        conn, addr = s.accept()
+        conn2client, addr = s.accept()
         print('Connected by', addr)
-        with conn:
+        with conn2client:
             while True:
-                guess = conn.recv()
+                guess = conn2client.recv()
                 if not guess:
                     break
                 guess = int(guess)
 
                 # Check guess against secret and respond
                 if guess < secret:
-                    conn.sendall('Too small!')
+                    conn2client.sendall('Too small!')
                 elif guess == secret:
-                    conn.sendall('Exactly! You win!')
+                    conn2client.sendall('Exactly! You win!')
                 else:
-                    conn.sendall('Too big!')
+                    conn2client.sendall('Too big!')
 
             print('Disconnected')
 

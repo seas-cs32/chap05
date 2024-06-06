@@ -16,7 +16,7 @@ with create_new_socket() as s:
     
     # Send and receive messages through the connection
 
-        while True:
+        while True:   # message processing loop
             guess = # recv guess from client
             guess = int(guess)
 

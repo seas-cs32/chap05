@@ -8,7 +8,7 @@ print('## Welcome to GUESS THE NUMBER! ##')
 # Create a socket and call it s
     # Connect s to the server
 
-    while True:
+    while True:   # our game loop
         # Grab a guess from the player
         while True:
             try:

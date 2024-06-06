@@ -1,7 +1,6 @@
-This directory contains everything needed for Chapter 5
-(i.e., Problem 5 in Act I, Scene II (Communities)).
-
-**Files for STUDENTS**
+This directory contains everything needed for
+**Chapter 5 (Play Guess-a-number)** in
+*Computational Thinking and Problem Solving*.
 
 `guess.py`: Frame used in class to develop `guess32.py`.
 
@@ -14,8 +13,6 @@ the networking components.
 `guess-server-pseudocode.py`: Guess-the-number server code with pseudocode for
 the networking components.
 
-`socket32.py`: A shim library that simplifies the `socket` library API.
-
 `guess-client.py`: Complete script for our guess-the-number client script, which
 uses the `socket32.py` shim library.
 
@@ -27,9 +24,6 @@ client script that uses the `socket` library rather than our `socket32.py` shim.
 `guess-server-noabstractions.py`: Complete script for our guess-the-number
 server script that uses the `socket` library rather than our `socket32.py` shim.
 
+`socket32.py`: A shim library that simplifies the `socket` library API.
+
 `ale04-*.py`: Client and server scripts for ALE \#4 in Chapter 5.
-
-`pset3.md`: Programming assignment description that asks you to build networked
-and non-networked versions of a rock-paper-scissors game.
-
-`Rock-paper-scissors.png`: Image used in `pset3.md`.
