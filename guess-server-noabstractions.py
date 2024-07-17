@@ -6,9 +6,6 @@ HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
 PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
 
 def main():
-    secret = random.randint(1, 100)
-    # print(f'The secret number is {secret}')
-
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         # Bind socket to address and publish contact info
         s.bind((HOST, PORT))
@@ -20,9 +17,12 @@ def main():
         print('Connected by', addr)
         
         with conn2client:
+            # Create a secret for this connection    
+            secret = random.randint(1, 100)
+
             while True:   # message processing loop
                 guess = conn2client.recv(1024).decode('utf-8')
-                if not guess:
+                if guess == '':
                     break
                 guess = int(guess)
 

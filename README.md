@@ -1,8 +1,9 @@
 This directory contains everything needed for
 **Chapter 5 (Play Guess-a-number)** in
-*Computational Thinking and Problem Solving*.
+[*Computational Thinking and Problem Solving (CTPS)*](https://profsmith89.github.io/ctps/ctps.html)
+by Michael D. Smith.
 
-`guess.py`: Frame used in class to develop `guess32.py`.
+`guess.py`: Frame used to develop `guess32.py`.
 
 `guess32.py`: Complete script for our guess-the-number game, which is
 non-networked and involves only a single player.

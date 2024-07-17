@@ -6,7 +6,7 @@ def main():
 
     secret = # use library API to choose a secret number
 
-    # Grab a guess from the player
+    # Grab the player's guess
 
     # Check guess against the secret
 

@@ -9,7 +9,7 @@ def main():
 
     while True:   # our game loop
         
-        # Grab a guess from the player
+        # Grab the player's guess
         while True:
             try:
                 guess = int(input('Please input your guess: '))

@@ -6,20 +6,23 @@ HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
 PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
 
 def main():
-    secret = random.randint(1, 100)
-    # print(f'The secret number is {secret}')
-
     with create_new_socket() as s:
+        # Bind socket to address and publish contact info
         s.bind(HOST, PORT)
         s.listen()
         print("GUESS-THE-NUMBER server started. Listening on", (HOST, PORT))
 
+        # Answer incoming connection
         conn2client, addr = s.accept()
         print('Connected by', addr)
+
         with conn2client:
-            while True:
+            # Create a secret for this connection    
+            secret = random.randint(1, 100)
+
+            while True:   # message processing loop
                 guess = conn2client.recv()
-                if not guess:
+                if guess == '':
                     break
                 guess = int(guess)
 
