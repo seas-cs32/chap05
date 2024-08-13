@@ -16,8 +16,8 @@ with create_new_socket() as s:
 
     # Send and receive messages through the connection
     while True:   # message processing loop
-        guess = # recv guess from client
-        guess = int(guess)
+        msg = # recv guess from client
+        guess = int(msg)
 
         # Check guess against secret and respond
         if guess < secret:

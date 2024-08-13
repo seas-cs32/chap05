@@ -21,10 +21,10 @@ def main():
             secret = random.randint(1, 100)
 
             while True:   # message processing loop
-                guess = conn2client.recv()
-                if guess == '':
+                msg = conn2client.recv()
+                if msg == '':
                     break
-                guess = int(guess)
+                guess = int(msg)
 
                 # Check guess against secret and respond
                 if guess < secret:
